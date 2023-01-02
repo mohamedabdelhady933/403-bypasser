@@ -41,6 +41,8 @@ curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/$2/*
 echo "  --> ${1}/${2}/*"
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/$2.php
 echo "  --> ${1}/${2}.php"
+curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/$2%00.php
+echo "  --> ${1}/${2}%00.php"
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" $1/$2.json
 echo "  --> ${1}/${2}.json"
 curl -k -s -o /dev/null -iL -w "%{http_code}","%{size_download}" -X TRACE $1/$2
